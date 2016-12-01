@@ -4,7 +4,10 @@ h1,h2,h3,h4,h5,h6 {
 p {
     font-family: "Merriweather", serif;
 }
-
+a {
+    text-decoration: none;
+    color: black;
+}
 /*  Menu  */
 
 #header {
@@ -27,10 +30,6 @@ p {
 #menu li {
     cursor: pointer;
     transition: ease-in-out 0.2s;
-}
-#menu li a {
-    text-decoration: none;
-    color: black;
 }
 .location {
     display: block;
@@ -77,9 +76,7 @@ p {
     font-weight: 100; 
 }
 .welcoming a {
-    text-decoration: none;
     font-weight: 600;
-    
 }
 .welcoming a:visited {
     color: black;
@@ -169,6 +166,5 @@ p {
     width: 100vw;
 }
 footer a {
-    text-decoration: none;
     color: dodgerblue;
 }
