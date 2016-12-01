@@ -74,6 +74,7 @@ a {
 }
 .welcoming p {
     font-weight: 100; 
+    margin: 5px;
 }
 .welcoming a {
     font-weight: 600;
