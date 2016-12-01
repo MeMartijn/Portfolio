@@ -1,0 +1,173 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Raleway", sans-serif;
+}
+p {
+    font-family: "Merriweather", serif;
+}
+
+/*  Menu  */
+
+#header {
+    position: fixed;
+    z-index: 90;
+    left: 50%;
+    margin-left: -375px;
+    width: 750px;
+    font-size: 12px;
+    padding: 5px;
+    font-family: "Raleway", sans-serif;
+}
+
+#menu {
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+#menu li {
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+#menu li a {
+    text-decoration: none;
+    color: black;
+}
+.location {
+    display: block;
+    margin-top: -15px;
+}
+.bullet {
+    font-size: 50px;
+    cursor: pointer;
+    display: block;
+}
+.active {
+    font-weight: 900;
+}
+#menu li a:hover {
+    font-weight: 900;
+}
+.active .bullet {
+    font-size: 60px;
+}
+#menu li a:visited {
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+/*  Slides  */
+/*  Slide 1  */
+#introduction {
+    background-color: aqua;
+    
+}
+.welcoming {
+    max-width: 750px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+}
+.welcoming p {
+    font-weight: 100; 
+}
+.welcoming a {
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+.welcoming a:visited {
+    color: black;
+}
+.cta-guide {
+    position: fixed;
+    -webkit-perspective: 1000;
+    z-index: 70;
+    margin-top: 80vh;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-weight: 100;
+    font-family: "Raleway", sans-serif;
+    animation-name: bounce;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+#cta-guidepointer {
+    margin: 10px;
+    display: block;
+}
+.cta-continue {
+    cursor: pointer;
+    animation-name: deepBounce;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+@keyframes bounce {
+    0% {margin-top: calc( 80vh + 20px );}
+    50% {margin-top: calc(  80vh + 10px );}
+    100% {margin-top: calc(  80vh + 20px );}
+}
+@keyframes deepBounce {
+    0% {margin-top: calc( 90vh );}
+    50% {margin-top: calc(  90vh + 10px );}
+    100% {margin-top: calc(  90vh );}
+}
+
+/*  Woonkamer  */
+#livingroom {
+    background-color: blue;
+    
+}
+
+/*  Badkamer  */
+#bathroam {
+    background-color: blueviolet;
+    
+}
+
+/*  Slaapkamer  */
+#bedroom {
+    background-color: aquamarine;
+    
+}
+
+/*  Bovenverdieping  */
+#upstairs {
+    background-color: cornflowerblue;
+    
+}
+
+/*  Informatie  */
+#info {
+    background-color: dodgerblue;
+}
+#info footer {
+    text-align: center;
+    background-color: #424242;
+    padding: 10px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+footer a {
+    text-decoration: none;
+    color: dodgerblue;
+}
