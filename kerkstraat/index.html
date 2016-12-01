@@ -1,28 +1,138 @@
 <!DOCTYPE HTML>
 <head>
-    <title>Welkom op de Kerkstraat!</title>
-    <link rel="stylesheet" type="text/css" href="attachments/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="attachments/style.css" />
-</head>
-<body>
     
-    <div id="fullpage">
-        <div class="section">
-            <div class="slide"> Slide 1 </div>
-            <div class="slide"> Slide 2 </div>
-            <div class="slide"> Slide 3 </div>
-            <div class="slide"> Slide 4 </div>
-        </div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
-    </div>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welkom op de Kerkstraat!</title>
+    <meta name="martijn.me" />
+    <meta name="description" content="Informatie en een rondleiding over het appartement op de Kerkstraat 74" />
+    <meta name="keywords" content="appartement, kerkstraat 74, alkmaar, huren, huurmogelijkheid, gestoffeerd, grote kerk" />
+    <meta content="initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport" />
+    
+    <link rel="stylesheet" type="text/css" href="attachments/jquery.fullPage.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="attachments/style.css" />
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="attachments/jquery.fullPage.min.js"></script> 
+    <script src="https://use.fontawesome.com/a342ea6ac4.js"></script>
     <script type="text/javascript">
+        
         $(document).ready(function() {
-            $('#fullpage').fullpage();
+            $("#fullpage").fullpage({
+                verticalCentered: false,
+                anchors: ["introductie", "woonkamer", "badkamer", "slaapkamer", "boven", "informatie"],
+                menu: "#header",
+                slidesNavigation: true,
+                controlArrows: false,
+            });
+            $(".cta-guide").click(function() {
+                $.fn.fullpage.moveSectionDown();
+            })
+            $(".cta-continue").click(function() {
+                $.fn.fullpage.moveSectionDown();
+            })
+            var menuHider = function() {
+                if ($(".excluded").hasClass("active") === true) {
+                    $("#header").addClass("hidden");
+                }
+                if ($(".excluded").hasClass("active") === false) {
+                    $("#header").removeClass("hidden");
+                }
+            }
+            var autoSlideShow = function() {
+                setInterval(function() {
+                    $.fn.fullpage.moveSlideRight();
+                }, 5000);
+            }
+            
+            menuHider();
+            autoSlideShow();
         });
+        
     </script>
+</head>
+<body>
+    
+    <div id="header">
+      <ul id="menu">
+        <li data-menuanchor="introductie" class="excluded">
+            <a href="#introductie">
+                <span class="bullet">•</span>
+            </a>
+        <li>
+        <li data-menuanchor="woonkamer">
+            <a href="#woonkamer">
+                <span class="bullet">•</span><span class="location">Woonkamer</span>
+            </a>
+        <li>
+        <li data-menuanchor="badkamer">
+            <a href="#badkamer">
+                <span class="bullet">•</span><span class="location">Badkamer</span>
+            </a>
+        <li>
+        <li data-menuanchor="slaapkamer">
+            <a href="#slaapkamer">
+                <span class="bullet">•</span><span class="location">Slaapkamer</span>
+            </a>
+        <li>
+        <li data-menuanchor="boven">
+            <a href="#boven">
+                <span class="bullet">•</span><span class="location">Tweede verdieping</span>
+            </a>
+        <li>
+        <li data-menuanchor="informatie" class="excluded">
+            <a href="#informatie">
+                <span class="bullet">•</span>
+            </a>
+        <li>
+      </ul>
+    </div>
+    
+    <div id="fullpage">
+
+        <div class="section" id="introduction">
+            <div class="cta-guide">
+                Start de rondleiding
+                <i id="cta-guidepointer" class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="welcoming">
+                <h1>Welkom op de Kerkstraat 74!</h1>
+                <p>Rust, ruimte, licht en bereikbaarheid zijn voor ons belangrijk. Dit appartement biedt alles wat u nodig heeft: doordat het direct naast de Grote Sint Laurenskerk in hartje Alkmaar ligt, is alles op loopafstand. </p>
+                <p>Vanuit uw grote ramen heeft u zicht op verschillende Alkmaarse pareltjes, zoals de <a href="http://www.molenvanpiet.nl/website/Molen_van_Piet/Welkom.html">Molen van Piet</a> en het <a href="https://www.alkmaar.nl/4/voorzieningenkaart-Algemeen-parken-Het_bolwerk.html">Bolwerk</a>. Toch biedt deze unieke locatie ook rust: het appartement bevindt zich op de tweede verdieping van het complex, waardoor u geen overlast ondervindt van wat er op straat gebeurd, waardoor het onverwachts toch heel rustig is.</p>
+            </div>
+            
+            <div class="slide"> 
+                
+            </div>
+            <div class="slide"> 
+                
+            </div>
+            <div class="slide"> 
+                
+            </div>
+            <div class="slide"> 
+                
+            </div>
+            
+            
+        </div>
+        <div class="section" id="livingroom">
+            <i class="cta-continue fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="section" id="bathroom">
+            <i class="cta-continue fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="section" id="bedroom">
+            <i class="cta-continue fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="section" id="upstairs">
+            <i class="cta-continue fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="section" id="info">
+            <footer>
+                Gemaakt door een <a href="http://martijn.me">trotse zoon</a> - &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script>
+            </footer>
+        </div>
+    </div>
+    
 </body>
