@@ -71,6 +71,7 @@ p {
     left: 50%;
     transform: translate(-50%, -100%);
     text-align: center;
+    z-index: 70;
 }
 .welcoming p {
     font-weight: 100; 
