@@ -129,10 +129,42 @@
             <i class="cta-continue fa fa-chevron-down fa-2x" aria-hidden="true"></i>
         </div>
         <div class="section" id="info">
+            <div class="infocontainer">
+                <h2>Interesse? Laat het ons weten.</h2>
+                <div class="components">
+                    <div id="map">
+                    </div>
+
+                    <form method="POST" action="http://formspree.io/koedijkers@gmail.com">
+                        <input type="text" name="name" placeholder="Naam">
+                        <input type="number" name="tel" placeholder="Telefoonnummer">
+                        <input type="email" name="email" placeholder="E-mail">
+                        <textarea name="message" placeholder="Opmerkingen"></textarea>
+                        <button type="submit">Verstuur</button>
+                    </form>
+
+                </div>  
+            </div>
+            
             <footer>
                 Gemaakt door een <a href="http://martijn.me">trotse zoon</a> - &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script>
             </footer>
         </div>
     </div>
-    
+    <script>
+      function initMap() {
+        var kerkstraat = {lat: 52.6322494, lng: 4.7424852};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: kerkstraat
+        });
+        var marker = new google.maps.Marker({
+          position: kerkstraat,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR43f2cF5Xz2YPckcSN8TDak7XVgyqYfI&callback=initMap">
+    </script>
 </body>
