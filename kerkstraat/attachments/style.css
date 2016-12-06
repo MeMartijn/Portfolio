@@ -23,6 +23,9 @@ a {
 
 #menu {
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
     display: flex;
     text-align: center;
     justify-content: space-around;
@@ -68,6 +71,8 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -100%);
     transform: translate(-50%, -100%);
     text-align: center;
     z-index: 70;
@@ -94,9 +99,8 @@ a {
     text-align: center;
     font-weight: 100;
     font-family: "Raleway", sans-serif;
-    animation-name: bounce;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
+    -webkit-animation: bounce 2.5s infinite;
+    animation: bounce 2.5s infinite;
     cursor: pointer;
 }
 #cta-guidepointer {
@@ -105,9 +109,8 @@ a {
 }
 .cta-continue {
     cursor: pointer;
-    animation-name: deepBounce;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
+    -webkit-animation: deepBounce 2.5s infinite;
+    animation: deepBounce 2.5s infinite;
     text-align: center;
     left: 0;
     right: 0;
@@ -125,11 +128,32 @@ a {
     50% {margin-top: calc(  90vh + 10px );}
     100% {margin-top: calc(  90vh );}
 }
+@-webkit-keyframes bounce {
+    0% {margin-top: calc( 80vh + 20px );}
+    50% {margin-top: calc(  80vh + 10px );}
+    100% {margin-top: calc(  80vh + 20px );}
+}
+@-webkit-keyframes deepBounce {
+    0% {margin-top: calc( 90vh );}
+    50% {margin-top: calc(  90vh + 10px );}
+    100% {margin-top: calc(  90vh );}
+}
+.slide:nth-child(1) {
+    background-image: url("grotekerk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide:nth-child(4) {
+    background-image: url("molen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 /*  Woonkamer  */
 #livingroom {
-    background-color: blue;
-    
+    background-image: url("woonkamer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*  Badkamer  */
@@ -140,7 +164,9 @@ a {
 
 /*  Slaapkamer  */
 #bedroom {
-    background-color: aquamarine;
+    background-image: url("slaapkamer.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
     
 }
 
@@ -171,9 +197,14 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 .components {
+    display: -webkit-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
     display: flex;
 }
 #map {
@@ -185,6 +216,9 @@ form {
     width: 400px;
     height: 450px;
     margin-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
 }
