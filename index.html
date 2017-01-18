@@ -2,11 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>Martijn Schouten</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .flexcontainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            font-family: 'Rubik', sans-serif;
+            
+        }
+        .socialmedia li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 5px;
+        }
+    </style>
   </head>
   <body>
-    <h1>Hi there!</h1>
-    <p>This is a placeholder page. Please come back later!</p>
-    <p>This may take a while, so hold up!</p>
+    <div class="flexcontainer">
+        <div class="container">
+        
+            <img src="profielfoto.jpg" />
+            <h1>Martijn Schouten</h1>
+            <ul class="socialmedia">
+                <li><a href=""><img src="linkedin.jpg" alt="LinkedIn"></a></li>
+                <li><a href=""><img src="github.jpg" alt="GitHub"></a></li>
+                <li><a href=""><img src="facebook.jpg" alt="Facebook"></a></li>
+                <li><a href=""><img src="twitter.jpg" alt="Twitter"></a></li>
+            </ul>
+            
+        </div>  
+    </div>
   </body>
 </html>
