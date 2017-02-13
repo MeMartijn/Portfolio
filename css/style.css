@@ -67,7 +67,7 @@ body {
     transition: all 0.2s ease-in-out;
 }
 .socialmedia li a i:hover {
-    color: dodgerblue;
+    color: #3299BB;
 }
 
 /* -- Timeline section -- */
