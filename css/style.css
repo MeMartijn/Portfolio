@@ -71,6 +71,9 @@ body {
 }
 
 /* -- Timeline section -- */
+#interactiondesign h1 {
+    text-align: center;
+}
 .timeline {
     margin: 0 10%;
     padding-left: 0;
