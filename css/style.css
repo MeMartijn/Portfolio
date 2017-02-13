@@ -71,6 +71,45 @@ body {
 }
 
 /* -- Timeline section -- */
-
+.timeline {
+    margin: 0 10%;
+    padding-left: 0;
+}
+.timeline:before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    border-left: 4px solid black;
+    margin-top: 10px;
+}
+.timeline h3 {
+    padding-left: 30px;
+    font-size: 1.5em;
+}
+.timeline h4, .timeline p {
+    padding-left: 35px;
+    margin-bottom: 5px;
+}
+.timeline li {
+    list-style-type: none;
+}
+.timeline li:before {
+    background-color: black;
+    border: 3px solid white;
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+}
+.week:before {
+    width: 25px;
+    height: 25px;
+    margin-left: -0.8em;
+}
+.assignment:before {
+    width: 20px;
+    height: 20px;
+    margin-left: -0.65em;
+    margin-top: -0.15em;
+}
 
 /* -- Footer -- */
