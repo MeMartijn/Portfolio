@@ -113,3 +113,11 @@ body {
 }
 
 /* -- Footer -- */
+footer {
+    background-color: #424242;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
