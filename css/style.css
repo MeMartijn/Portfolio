@@ -103,12 +103,12 @@ body {
 .week:before {
     width: 25px;
     height: 25px;
-    margin-left: -0.8em;
+    margin-left: -0.65em;
 }
 .assignment:before {
     width: 20px;
     height: 20px;
-    margin-left: -0.65em;
+    margin-left: -0.5em;
     margin-top: -0.15em;
 }
 
