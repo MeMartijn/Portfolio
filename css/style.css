@@ -79,7 +79,7 @@ body {
     content: " ";
     position: absolute;
     height: 60%;
-    border-left: 4px solid black;
+    border-left: 4px solid #424242;;
     margin-top: 10px;
 }
 .timeline h3 {
@@ -94,7 +94,7 @@ body {
     list-style-type: none;
 }
 .timeline li:before {
-    background-color: black;
+    background-color: #424242;
     border: 3px solid white;
     content: " ";
     position: absolute;
@@ -104,12 +104,12 @@ body {
     width: 25px;
     height: 25px;
     margin-left: -0.65em;
+    margin-top: 0.1em;
 }
 .assignment:before {
     width: 20px;
     height: 20px;
     margin-left: -0.5em;
-    margin-top: -0.15em;
 }
 
 /* -- Footer -- */
