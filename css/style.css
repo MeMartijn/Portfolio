@@ -125,6 +125,7 @@ header h1 {
     font-size: 25px;
     padding: 15px 25px;
     transition: 0.2s ease-in-out;
+    text-align: center;
 }
 .portfolio-btn a:hover {
     background-color: rgb(50, 153, 187);
@@ -286,6 +287,10 @@ footer {
     header:before {
         height: 110%;
         margin-top: 100px;
+    }
+    .portfolio-btn {
+        justify-content: space-between;
+        margin-top: 40px;
     }
 }
 @media (max-width: 400px) {
