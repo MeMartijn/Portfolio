@@ -271,9 +271,8 @@ footer {
 
 
 /* ----------------M--E--D--I--A-----Q--U--E--R--I--E---S--------------- */
-
-/* Header */
-@media (max-width: 950px) {
+/* Weird max-widths due to the behavior of the transparent filter :) */
+@media (max-width: 960px) {
     header:before {
         height: 90%;
         margin-top: 150px;
@@ -281,6 +280,14 @@ footer {
     .grid {
         margin-left: 15px;
         margin-right: 15px;
+    }
+    .projects {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .projects div {
+        margin: 15px;
     }
 }
 @media (max-width: 550px) {
