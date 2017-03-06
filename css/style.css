@@ -85,6 +85,7 @@ header h1 {
     margin-top: -50px;
     margin-left: -15px;
     z-index: -1;
+    overflow: hidden;
 }
 .upperdiv {
     transform: rotate(7deg);
@@ -266,4 +267,28 @@ footer {
     height: 20px;
     margin-left: -0.5em;
 }
+
+
+/* ----------------M--E--D--I--A-----Q--U--E--R--I--E---S--------------- */
+
+/* Header */
+@media (max-width: 950px) {
+    header:before {
+        height: 90%;
+        margin-top: 150px;
+    }
+}
+@media (max-width: 550px) {
+    header:before {
+        height: 110%;
+        margin-top: 100px;
+    }
+}
+@media (max-width: 400px) {
+    header:before {
+        height: 100%;
+        margin-top: 50px;
+    }
+}
+
 
