@@ -277,6 +277,10 @@ footer {
         height: 90%;
         margin-top: 150px;
     }
+    .grid {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 @media (max-width: 550px) {
     header:before {
