@@ -240,7 +240,28 @@ footer {
 }
 
 
+/* -- Portfolio page -- */
+header a img {
+    text-decoration: none;
+    margin-bottom: 5vh; 
+}
+#interactiondesign .grid > h1 {
+    margin-bottom: 0;
+}
+#interactiondesign .grid > p {
+    margin-top: 10px;
+}
+
+
 /* -- Timeline section -- */
+#timeline {
+    width: 100%;
+    background-color: #424242; 
+    padding-top: 20px;
+    color: white;
+    margin-bottom: -30px;
+    padding-bottom: 50px;
+}
 .timeline {
     margin: 0 10%;
     padding-left: 0;
@@ -250,16 +271,30 @@ footer {
     content: " ";
     position: absolute;
     height: 100%;
-    border-left: 4px solid #424242;;
+    border-left: 4px solid white;
     margin-top: 10px;
+}
+.week {
+    margin: 50px 0;
 }
 .timeline h3 {
     padding-left: 30px;
     font-size: 1.5em;
+    color: white;
 }
-.timeline h4, .timeline p {
+.timeline h4, .timeline p, .timeline h6 {
     padding-left: 35px;
     margin-bottom: 5px;
+    color: white;
+}
+.timeline h6 {
+    font-style: italic;
+    margin: 0;
+    font-weight: 100;
+    color: rgba(255,255,255,0.5);
+}
+.timeline p {
+    font-size: 1em;
 }
 .timeline li {
     list-style-type: none;
