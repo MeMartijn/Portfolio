@@ -270,7 +270,7 @@ header a img {
 .timeline:before {
     content: " ";
     position: absolute;
-    height: 100%;
+    height: calc(100% - 72px);
     border-left: 4px solid white;
     margin-top: 10px;
 }
