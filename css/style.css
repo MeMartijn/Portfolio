@@ -61,6 +61,7 @@ header img {
     width: auto;
     margin-top: 8vh;
     max-width: 960px;
+    z-index: 99;
 }
 header h1 {
     font-size: 75px;
@@ -300,6 +301,23 @@ header a img {
 }
 .timeline p {
     font-size: 1em;
+    word-wrap: break-word;
+}
+.timeline-btn {
+    margin-left: 35px;
+    margin-top: 20px;
+}
+.timeline-btn a:hover {
+    background-color: rgb(50, 153, 187);
+    transition: 0.2s ease-in-out;
+}
+.timeline-btn a {
+    background-color: #F8981D;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
 }
 .timeline li {
     list-style-type: none;
