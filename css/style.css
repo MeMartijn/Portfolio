@@ -276,7 +276,6 @@ header a img {
 .timeline:before {
     content: " ";
     position: absolute;
-    height: calc(100% - 72px);
     border-left: 4px solid white;
     margin-top: 10px;
 }
@@ -287,6 +286,9 @@ header a img {
     padding-left: 30px;
     font-size: 1.5em;
     color: white;
+}
+.timeline h4 {
+    margin-top: 50px;
 }
 .timeline h4, .timeline p, .timeline h6 {
     padding-left: 35px;
@@ -358,9 +360,6 @@ header a img {
         align-items: center;
         flex-wrap: wrap;
     }
-}
-@media (max-width: 910px) {
-    
 }
 @media (max-width: 550px) {
     header:before {

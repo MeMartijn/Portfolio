@@ -26,7 +26,7 @@
                 
         <section id="timeline">
             <div class="grid">
-                <ul class="timeline">
+                <ul class="timeline" id="parent">
                     <li class="week">
                         <h3>Week 1</h3>
                     </li>
@@ -131,10 +131,10 @@
                             This last group exercise was quite an easy one, to be honest. To redesign a salary report, we decided what information was the most important, and adjusted the layout of the report according to our thoughts.
                         </p>
                     </li>
-                    <li class="assignment">
+                    <li class="assignment" id="last">
                         <h4>Pie creator</h4>
                         <h6>Individual assignment</h6>
-                        <p>Case: <b></b><br />
+                        <p>Case: <b>Create a form for making custom pies, and focus on the right user inputs.</b><br />
                             This exercise was focused on forms and user input. I created a form to create a custom pie. The hard part of this exercise was to find the right input methods for each type of data that was needed. For example, to decide between a chocolate flavoured filling or a vanilla flavoured filling, what type of user input would be the best? 
                         </p>
                         <div class="timeline-btn">
@@ -150,5 +150,13 @@
                 Copyright &copy; 2016-2017 Martijn Schouten
             </div>
         </footer>
+        
+        <script>
+            var lastChildHeight = document.getElementById('last').clientHeight;
+            var parentHeight = document.getElementById('parent').clientHeight;
+            var calcHeight = parentHeight - lastChildHeight;
+            
+            document.styleSheets[2].insertRule('.timeline::before { height: ' + calcHeight + 'px }', 0);
+        </script>
     </body>
 </html>
