@@ -71,6 +71,7 @@ header h1 {
 }
 
 
+
 /* -- Divider -- */
 .divider {
     width: 100vw;
@@ -256,6 +257,34 @@ header a img {
 }
 #interactiondesign .grid > p {
     margin-top: 10px;
+}
+
+
+
+/* -- Navigation subpages -- */
+nav {
+    background-image: url("../assets/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.subpageheader {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subpageheader img {
+    height: 80px;
+    width: auto;
+}
+.subpageheader a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    font-weight: 900;
+}
+.subpageheader a:hover {
+    color: #F8981D; 
 }
 
 
