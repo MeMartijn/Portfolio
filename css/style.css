@@ -173,15 +173,16 @@ header h1 {
     background-size: cover;
     background-repeat: no-repeat;
 }
-#spiegeltje {
-    background-image: url(../assets/spiegeltjebg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+#uva {
+    background-color: #751B68;
 }
 #marktplaats {
     background-image: url(../assets/marktplaatsbg.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+#uva img {
+  width: 70%;
 }
 .overlay {
     left: 0;
@@ -250,7 +251,7 @@ footer {
 /* -- Portfolio page -- */
 header a img {
     text-decoration: none;
-    margin-bottom: 5vh; 
+    margin-bottom: 5vh;
 }
 #interactiondesign .grid > h1 {
     margin-bottom: 0;
@@ -261,37 +262,28 @@ header a img {
 
 
 
-/* -- Navigation subpages -- */
-nav {
-    background-image: url("../assets/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+/* -- Portfolio -- */
+nav.return {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: auto;
 }
-.subpageheader {
-    padding: 50px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav.return img {
+    width: 125px;
+    height: auto;
+    opacity: 0.4;
+    transition: 0.4s ease-in-out;
 }
-.subpageheader img {
-    height: 80px;
-    width: auto;
-}
-.subpageheader a {
-    color: white;
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
-    font-weight: 900;
-}
-.subpageheader a:hover {
-    color: #F8981D; 
+nav.return img:hover {
+    opacity: 1;
 }
 
 
 /* -- Timeline section -- */
 #timeline {
     width: 100%;
-    background-color: #424242; 
+    background-color: #424242;
     padding-top: 20px;
     color: white;
     margin-bottom: -30px;
@@ -383,6 +375,11 @@ nav {
 
 /* ----------------M--E--D--I--A-----Q--U--E--R--I--E---S--------------- */
 /* Weird max-widths due to the behavior of the transparent filter :) */
+/*@media (max-width: 1920px) {
+  header {
+    background-image: url("../assets/bg1920.jpg");
+  }
+}*/
 @media (max-width: 960px) {
     header:before {
         height: 90%;
@@ -413,5 +410,3 @@ nav {
         margin-top: 50px;
     }
 }
-
-
