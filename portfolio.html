@@ -172,7 +172,7 @@
                                     <a href="downloads/indiv7.pdf">Download as PDF</a>
                                 </div>
                             </li>
-                            <li class="week" id="last">
+                            <li class="week">
                                 <h3>As a final assignment, my team and I conducted research for Marktplaats, the biggest selling platform of the Netherlands. A summary of our ideas, prototypes and research can be found <a href="/downloads/marktplaats.pdf">here</a>.</h3>
                             </li>
                         </ul>
@@ -203,15 +203,6 @@
                 activatedPanels.forEach(function(panel){
                     panel.classList.remove("activate");
                 })
-
-                // Dynamically load timeline
-                if (this.contains(timeline)) {
-                    // Calculate and form timeline length
-                    const lastChildHeight = document.getElementById('last').clientHeight;
-                    const parentHeight = document.getElementById('parent').clientHeight;
-                    const calcHeight = parentHeight - lastChildHeight;
-                    document.styleSheets[2].insertRule('.timeline::before { height: ' + calcHeight + 'px }', 0);
-                }
 
                 // Add activation on clicked panel
                 this.classList.toggle("activate");

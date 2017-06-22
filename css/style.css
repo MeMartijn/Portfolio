@@ -327,7 +327,6 @@ nav.return img:hover {
 }
 
 
-
 /* -- University of Amsterdam section -- */
 header a img {
     text-decoration: none;
@@ -348,7 +347,7 @@ header a img {
     padding-bottom: 50px;
 }
 .timeline {
-    padding-left: 0;
+    padding-left: 10px;
     position: relative;
 }
 .timeline:before {
@@ -356,6 +355,7 @@ header a img {
     position: absolute;
     border-left: 4px solid white;
     margin-top: 10px;
+    height: 200%;
 }
 .week {
     margin: 50px 0;
@@ -388,11 +388,11 @@ header a img {
     margin-top: 20px;
 }
 .timeline-btn a:hover {
-    background-color: rgb(50, 153, 187);
+    background-color: #F8981D;
     transition: 0.2s ease-in-out;
 }
 .timeline-btn a {
-    background-color: #F8981D;
+    background-color: #751B68;
     padding: 8px 20px;
     text-decoration: none;
     font-size: 1em;
@@ -427,7 +427,7 @@ header a img {
     transition: 0.2s ease-in-out;
 }
 .timeline h3 a:hover {
-    color: rgb(50, 153, 187);
+    color: #751B68;
 }
 
 
