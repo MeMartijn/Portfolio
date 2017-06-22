@@ -18,12 +18,21 @@
         <div class="portfolio">
 
             <section class="panel">
+                <div class="hide">
+                    <img src="assets/esnwlogo.svg" />
+                </div>
             </section>
-            
+
             <section class="panel">
+                <div class="hide">
+                    <img src="assets/interlogo.png" />
+                </div>
             </section>
 
           	<section class="panel">
+                <div class="hide">
+                    <img src="assets/uvalogo.png" />
+                </div>
                 <section id="interactiondesign">
                     <div class="grid">
                         <h1>University of Amsterdam: Interaction design</h1>
@@ -157,23 +166,40 @@
             </section>
 
             <section class="panel">
+                <div class="hide">
+                    <img src="assets/marktplaatslogo.png" />
+                </div>
             </section>
         </div>
 
-
-
-        <footer>
-            <div class="grid">
-                Copyright &copy; 2016-2017 Martijn Schouten
-            </div>
-        </footer>
-
         <script>
-            var lastChildHeight = document.getElementById('last').clientHeight;
-            var parentHeight = document.getElementById('parent').clientHeight;
-            var calcHeight = parentHeight - lastChildHeight;
+            const panels = document.querySelectorAll(".panel");
+            const timeline = document.querySelector("#timeline");
 
-            document.styleSheets[2].insertRule('.timeline::before { height: ' + calcHeight + 'px }', 0);
+            // Panel clicks
+            function activatePanel(e) {
+                // Reset all styles
+                const activatedPanels = document.querySelectorAll(".activate");
+                activatedPanels.forEach(function(panel){
+                    panel.classList.remove("activate");
+                })
+
+                // Dynamically load timeline
+                if (this.contains(timeline)) {
+                    // Calculate and form timeline length
+                    const lastChildHeight = document.getElementById('last').clientHeight;
+                    const parentHeight = document.getElementById('parent').clientHeight;
+                    const calcHeight = parentHeight - lastChildHeight;
+                    document.styleSheets[2].insertRule('.timeline::before { height: ' + calcHeight + 'px }', 0);
+                }
+
+                // Add activation on clicked panel
+                this.classList.toggle("activate");
+            }
+            panels.forEach(function(panel){
+                panel.addEventListener("click", activatePanel);
+            })
+
         </script>
     </body>
 </html>
