@@ -97,6 +97,9 @@
                 Copyright &copy; 2016-2017 - Martijn Schouten
             </div>
         </footer>
-
+    
+    <script>
+        document.querySelectorAll('a:not(.socialmedia a)').addEventListener('click', (e) => { e.preventDefault(); return false; });
+    </script>
     </body>
 </html>
