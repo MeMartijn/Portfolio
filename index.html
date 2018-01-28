@@ -99,7 +99,7 @@
         </footer>
     
     <script>
-        document.querySelectorAll('.projects a').addEventListener('click', (e) => { e.preventDefault(); return false; });
+        document.querySelectorAll('.projects a').forEach((link) => { link.addEventListener('click', (e) => { e.preventDefault(); return false; }) });
     </script>
     </body>
 </html>
