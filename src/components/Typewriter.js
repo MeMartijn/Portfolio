@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import './../styles/fonts.css';
 import './../styles/animations.css';
 
-const WriterText = styled.p`
-    font-family: 'Oxygen', sans-serif;
+const WriterText = styled.h1`
+    font-family: 'Raleway', sans-serif;
     font-size: 5em;
     line-height: 1em;
     color: white;
@@ -43,7 +43,7 @@ export default class Typewriter extends Component {
                 // Show a space as a keyboard stroke
                 if (target === ' ') {
                     this.setState({
-                        displayedText: this.state.displayedText + '&nbsp;',
+                        displayedText: this.state.displayedText + '\u00A0',
                     });
                 } else {
                     this.setState({

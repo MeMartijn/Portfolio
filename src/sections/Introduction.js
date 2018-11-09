@@ -1,7 +1,9 @@
 import React, { Component }  from 'react';
-import Typewriter from './../components/Typewriter';
-import Particles from 'react-particles-js';
 import styled from 'styled-components';
+
+import Particles from 'react-particles-js';
+import Typewriter from './../components/Typewriter';
+import Socials from './../components/Socials';
 
 // Elements
 const BackgroundContainer = styled.div`
@@ -48,7 +50,10 @@ const Introduction = (props) => {
             </BackgroundContainer>
 
             <CenterContainer>
-                <Typewriter text="Hi, I'm Martijn." />
+                <div>
+                    <Typewriter text="Hi, I'm Martijn." />
+                    <Socials/>
+                </div>
             </CenterContainer>
         </>
     );
