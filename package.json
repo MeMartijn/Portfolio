@@ -4,6 +4,10 @@
   "private": true,
   "homepage": "https://memartijn.github.io/MeMartijn.github.io",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-brands-svg-icons": "^5.5.0",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@fortawesome/react-fontawesome": "^0.1.3",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-particles-js": "^2.3.0",
