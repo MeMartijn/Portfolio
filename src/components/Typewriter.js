@@ -9,6 +9,8 @@ const WriterText = styled.h1`
     font-size: 5em;
     line-height: 1em;
     color: white;
+    max-width: 90vw;
+    word-wrap: break;
 
     &::after {
         content: '';
