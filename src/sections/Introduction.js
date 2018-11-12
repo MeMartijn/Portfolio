@@ -24,26 +24,26 @@ const CenterContainer = styled.section`
 const Introduction = (props) => {
     return (
         <>
-            <BackgroundContainer>
+            <BackgroundContainer id="particles">
                 <Particles
                     params = {{
                         'particles': {
                             'number': {
-                                'value': 110
-                            },
-                            'size': {
-                                'value': 1
+                                'value': 30,
+                                'density': {
+                                    "enable": true
+                                }
                             },
                             'move': {
-                            'speed': 1,
+                                'speed': 1,
                             },
                             'interactivity': {
-                            'events': {
-                                'onhover': {
-                                'enable': true,
-                                'mode': 'repulse'
+                                'events': {
+                                    'onhover': {
+                                    'enable': true,
+                                    'mode': 'repulse'
+                                    }
                                 }
-                            }
                             }
                         }
                     }}/>
