@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 
+import { playNextAnimation } from '../actions/animationActions';
 import './../styles/fonts.css';
 import './../styles/animations.css';
 
@@ -21,20 +23,20 @@ const WriterText = styled.h1`
     }
 `;
 
-export default class Typewriter extends Component {
+class Typewriter extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             displayedText: '',
             fullText: this.props.text || '',
-        }
-
-        
+        }      
     }
 
     componentDidMount() {
-        this.adjustText(this.state.fullText);
+        if (this.props.animations.animationFlow[0] === this.constructor.name) {
+            this.adjustText(this.state.fullText);
+        }
     }
 
     adjustText(input) {
@@ -62,6 +64,7 @@ export default class Typewriter extends Component {
             }, Math.random() * 200)
         } else {
             // Stop recursion call once the string is empty
+            this.props.playNextAnimation();
             return;
         }
     }
@@ -72,3 +75,9 @@ export default class Typewriter extends Component {
         );
     }
 }
+
+const mapStateToProps = state => ({
+    animations: state.animations
+})
+
+export default connect(mapStateToProps, { playNextAnimation })(Typewriter);
