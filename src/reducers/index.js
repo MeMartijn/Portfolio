@@ -1,3 +1,7 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({});
+import animationReducer from './animationReducer';
+
+export default combineReducers({
+    animations: animationReducer
+});
