@@ -1,27 +1,4 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { connect } from 'react-redux';
-
-import { playNextAnimation } from '../actions/animationActions';
-import './../styles/fonts.css';
-import './../styles/animations.css';
-
-const WriterText = styled.h1`
-    font-family: 'Raleway', sans-serif;
-    font-size: 5em;
-    line-height: 1em;
-    color: white;
-    max-width: 90vw;
-    word-wrap: break;
-
-    &::after {
-        content: '';
-        position: absolute;
-        width: 2px;
-        height: 1em;
-        animation: flickering 1.1s linear 1s infinite;
-    }
-`;
+import { Component } from 'react';
 
 class Typewriter extends Component {
     constructor(props) {
@@ -30,12 +7,6 @@ class Typewriter extends Component {
         this.state = {
             displayedText: '',
             fullText: this.props.text || '',
-        }      
-    }
-
-    componentDidMount() {
-        if (this.props.animations.animationFlow[0] === this.constructor.name) {
-            this.adjustText(this.state.fullText);
         }
     }
 
@@ -64,20 +35,20 @@ class Typewriter extends Component {
             }, Math.random() * 200)
         } else {
             // Stop recursion call once the string is empty
-            this.props.playNextAnimation();
+            this.onAnimationEnd();
             return;
         }
     }
 
+    // Hook for child components to execute logic on ending of animation
+    onAnimationEnd() {
+        return null;
+    }
+
+    // Render will be replaced by child components
     render() {
-        return (
-            <WriterText>{ this.state.displayedText }</WriterText>
-        );
+        return null;
     }
 }
 
-const mapStateToProps = state => ({
-    animations: state.animations
-})
-
-export default connect(mapStateToProps, { playNextAnimation })(Typewriter);
+export default Typewriter;
