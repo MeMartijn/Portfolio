@@ -25,12 +25,6 @@ const IntroductionHeader = styled.h1 `
 `;
 
 class IntroductionTagline extends Typewriter {
-    componentDidMount() {
-        if (this.props.animations.animationFlow[0] === this.constructor.name) {
-            this.adjustText(this.state.fullText);
-        }
-    }
-
     onAnimationEnd() {
         this.props.playNextAnimation();
     }

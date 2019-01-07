@@ -10,6 +10,12 @@ class Typewriter extends Component {
         }
     }
 
+    componentDidMount() {
+        if (this.props.animations.animationFlow[0] === this.constructor.name) {
+            this.adjustText(this.state.fullText);
+        }
+    }
+
     adjustText(input) {
         if (input.length > 0) {
             window.setTimeout(() => {
