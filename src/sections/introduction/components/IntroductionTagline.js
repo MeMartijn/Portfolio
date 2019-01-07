@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { connect } from 'react-redux';
 
 import { playNextAnimation } from '../../../actions/animationActions';
@@ -15,28 +15,42 @@ const IntroductionHeader = styled.h1 `
     max-width: 90vw;
     word-wrap: break;
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 2px;
-        height: 1em;
-        animation: flickering 1.1s linear 1s infinite;
-    }
+    ${props => props.animated && css`
+        &::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 1em;
+            animation: flickering 1.1s linear 1s infinite;
+        }
+    `}
 `;
 
 class IntroductionTagline extends Typewriter {
     onAnimationEnd() {
-        this.props.playNextAnimation();
+        setTimeout(() => {
+            this.setState({
+                animated: false
+            })
+
+            this.props.playNextAnimation();
+        }, 1000)
     }
 
     render() {
         if (this.props.animations.animationFlow[0] === this.constructor.name) {
             if (!this.timeout) {
+                this.setState({
+                    animated: true
+                })
+
                 this.adjustText(this.state.fullText);
             }
         }
 
-        return (
+        return this.state.animated ? (
+            <IntroductionHeader animated>{ this.state.displayedText }</IntroductionHeader>
+        ) : (
             <IntroductionHeader>{ this.state.displayedText }</IntroductionHeader>
         );
     }

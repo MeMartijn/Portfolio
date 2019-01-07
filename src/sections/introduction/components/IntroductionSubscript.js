@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { connect } from 'react-redux';
 
 import { playNextAnimation } from '../../../actions/animationActions';
@@ -7,7 +7,7 @@ import Typewriter from '../../../components/Typewriter';
 import './../../../styles/fonts.css';
 import './../../../styles/animations.css';
 
-const IntroductionHeader = styled.h2 `
+const IntroductionHeader = styled.h1 `
     font-family: 'Raleway', sans-serif;
     font-size: 5em;
     line-height: 1em;
@@ -15,18 +15,21 @@ const IntroductionHeader = styled.h2 `
     max-width: 90vw;
     word-wrap: break;
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 2px;
-        height: 1em;
-        animation: flickering 1.1s linear 1s infinite;
-    }
+    ${props => props.animated && css`
+        &::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 1em;
+            background-color: white;
+            animation: flickering 1.1s linear 1s infinite;
+        }
+    `}
 `;
 
 class IntroductionSubscript extends Typewriter {
     onAnimationEnd() {
-        // this.props.playNextAnimation();
+        this.props.playNextAnimation();
     }
 
     render() {
@@ -36,7 +39,9 @@ class IntroductionSubscript extends Typewriter {
             }
         }
 
-        return (
+        return this.state.displayedText ? (
+            <IntroductionHeader animated>{ this.state.displayedText }</IntroductionHeader>
+        ) : (
             <IntroductionHeader>{ this.state.displayedText }</IntroductionHeader>
         );
     }
