@@ -10,15 +10,9 @@ class Typewriter extends Component {
         }
     }
 
-    componentDidMount() {
-        if (this.props.animations.animationFlow[0] === this.constructor.name) {
-            this.adjustText(this.state.fullText);
-        }
-    }
-
     adjustText(input) {
         if (input.length > 0) {
-            window.setTimeout(() => {
+            this.timeout = setTimeout(() => {
                 let target = input[0];
 
                 // Show a space as a keyboard stroke

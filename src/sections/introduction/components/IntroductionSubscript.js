@@ -7,7 +7,7 @@ import Typewriter from '../../../components/Typewriter';
 import './../../../styles/fonts.css';
 import './../../../styles/animations.css';
 
-const IntroductionHeader = styled.h1 `
+const IntroductionHeader = styled.h2 `
     font-family: 'Raleway', sans-serif;
     font-size: 5em;
     line-height: 1em;
@@ -24,9 +24,9 @@ const IntroductionHeader = styled.h1 `
     }
 `;
 
-class IntroductionTagline extends Typewriter {
+class IntroductionSubscript extends Typewriter {
     onAnimationEnd() {
-        this.props.playNextAnimation();
+        // this.props.playNextAnimation();
     }
 
     render() {
@@ -46,4 +46,4 @@ const mapStateToProps = state => ({
     animations: state.animations
 })
 
-export default connect(mapStateToProps, { playNextAnimation })(IntroductionTagline);
+export default connect(mapStateToProps, { playNextAnimation })(IntroductionSubscript);

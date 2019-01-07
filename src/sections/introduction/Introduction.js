@@ -1,8 +1,9 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Particles from 'react-particles-js';
 import IntroductionTagline from './components/IntroductionTagline';
+import IntroductionSubscript from './components/IntroductionSubscript';
 import Socials from './components/Socials';
 
 // Elements
@@ -18,12 +19,21 @@ const CenterContainer = styled.section`
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    text-align: center;
 `;
 
 // Render
 const Introduction = (props) => {
     return (
         <>
+            <CenterContainer>
+                <div>
+                    <IntroductionTagline text="Hi, I'm Martijn." />
+                    <IntroductionSubscript text="I digitalize businesses." />
+                    <Socials/>
+                </div>
+            </CenterContainer>
+            
             <BackgroundContainer id="particles">
                 <Particles
                     params = {{
@@ -48,13 +58,6 @@ const Introduction = (props) => {
                         }
                     }}/>
             </BackgroundContainer>
-
-            <CenterContainer>
-                <div>
-                    <IntroductionTagline text="Hi, I'm Martijn." />
-                    <Socials/>
-                </div>
-            </CenterContainer>
         </>
     );
 }
