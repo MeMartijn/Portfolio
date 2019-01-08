@@ -10,7 +10,6 @@ import './../../../styles/animations.css';
 const IntroductionHeader = styled.h1 `
     font-family: 'Raleway', sans-serif;
     font-size: 5em;
-    line-height: 1em;
     color: white;
     max-width: 90vw;
     word-wrap: break;
@@ -20,7 +19,8 @@ const IntroductionHeader = styled.h1 `
             content: '';
             position: absolute;
             width: 2px;
-            height: 1em;
+            height: 1.185em;
+            background-color: white;
             animation: flickering 1.1s linear 1s infinite;
         }
     `}
