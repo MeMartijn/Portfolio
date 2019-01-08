@@ -34,7 +34,7 @@ class IntroductionTagline extends Typewriter {
             })
 
             this.props.playNextAnimation();
-        }, 1000)
+        }, 600)
     }
 
     render() {
