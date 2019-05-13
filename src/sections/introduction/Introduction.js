@@ -29,7 +29,7 @@ const Introduction = (props) => {
             <CenterContainer>
                 <div>
                     <IntroductionTagline text="Hi, I'm Martijn." />
-                    <IntroductionSubscript text="I digitalize businesses." />
+                    <IntroductionSubscript text="I digitize businesses." />
                     {/* <Socials/> */}
                 </div>
             </CenterContainer>
