@@ -8,12 +8,16 @@ import Typewriter from '../../../components/Typewriter';
 import './../../../styles/fonts.css';
 import './../../../styles/animations.css';
 
-const IntroductionHeader = styled.div `
+const IntroductionSub = styled.div `
     font-family: 'Raleway', sans-serif;
-    font-size: 5em;
+    font-size: 3.5em;
     color: white;
     max-width: 90vw;
     word-wrap: break;
+
+    ${props => props.fontSwapped && css`
+        font-family: 'Source Sans Pro', sans-serif;
+    `}
 
     ${props => props.animated && css`
         &::after {
@@ -51,7 +55,7 @@ class IntroductionSubscript extends Typewriter {
     selectionAnimation() {
         // Set up selection cubic-bezier
         const duration = 400;
-        const cubicTiming = bezier(0.65, 0.05, 0.36, 1, (1000 / 60 / duration) / 4);
+        const cubicTiming = bezier(.43, 0, 1, 1, (1000 / 60 / duration) / 4);
 
         // Start selection from the end to the beginning
         const len = this.state.displayedText.length;
@@ -59,6 +63,11 @@ class IntroductionSubscript extends Typewriter {
 
         for (let t = 0; t <= 1; t += ((len - chars[chars.length - 1]) / len) ) {
             setTimeout(() => {
+                // Execute next animation upon finish
+                if (chars.length === 0) {
+                    this.fontChangeAnimation();
+                }
+
                 this.setState({
                     selected: [...this.state.selected, chars.pop()],
                 })
@@ -66,12 +75,31 @@ class IntroductionSubscript extends Typewriter {
         }
     }
 
+    fontChangeAnimation() {
+        const removeSelection = () => {
+            this.setState({
+                selected: [],
+            })
+        }
+
+        // Change font family
+        setTimeout(() => {
+            this.setState({
+                fontChanged: true
+            })
+
+            removeSelection();
+        }, 200)
+    }
+
     render() {
         if (this.props.animations.animationFlow[0] === this.constructor.name) {
             if (!this.timeout) {
                 this.setState({
                     animated: true,
-                    selected: []
+                    selected: [],
+                    fontChanged: false,
+                    reduced: 0
                 })
 
                 this.adjustText(this.state.fullText);
@@ -79,13 +107,13 @@ class IntroductionSubscript extends Typewriter {
         }
 
         return this.state.animated ? (
-            <IntroductionHeader animated>{ this.state.displayedText }</IntroductionHeader>
+            <IntroductionSub animated>{ this.state.displayedText }</IntroductionSub>
         ) : (
-            <IntroductionHeader>
+            <IntroductionSub fontSwapped={ this.state.fontChanged } reducedOnce={ this.state.reduced === 1 } reducedTwice={ this.state.reduced === 2 } reducedTrice={ this.state.reduced === 3 }>
                 { this.state.displayedText.split('').map((item, index) => (
                     <Selection id={ index } key={ index } selected={ this.state.selected }>{ item }</Selection>
                 )) }
-            </IntroductionHeader>
+            </IntroductionSub>
         );
     }
 }
