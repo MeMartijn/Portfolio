@@ -21,43 +21,48 @@ const CenterContainer = styled.section`
     min-height: 100vh;
     text-align: center;
 `;
+const IntroductionContainer = styled.div`
+    z-index: 10;
+`;
 
 // Render
 const Introduction = (props) => {
     return (
         <>
             <CenterContainer>
-                <div>
+                <IntroductionContainer>
                     <IntroductionTagline text="Hi, I'm Martijn." />
                     <IntroductionSubscript text="I digitize businesses." />
                     <Socials/>
-                </div>
-            </CenterContainer>
-            
-            <BackgroundContainer id="particles">
-                <Particles
-                    params = {{
-                        'particles': {
-                            'number': {
-                                'value': 30,
-                                'density': {
-                                    "enable": true
-                                }
-                            },
-                            'move': {
-                                'speed': 1,
-                            },
-                            'interactivity': {
-                                'events': {
-                                    'onhover': {
-                                    'enable': true,
-                                    'mode': 'repulse'
+                </IntroductionContainer>
+
+                <BackgroundContainer id="particles">
+                    <Particles
+                        params = {{
+                            'particles': {
+                                'number': {
+                                    'value': 30,
+                                    'density': {
+                                        "enable": true
+                                    }
+                                },
+                                'move': {
+                                    'speed': 1,
+                                },
+                                'interactivity': {
+                                    'events': {
+                                        'onhover': {
+                                        'enable': true,
+                                        'mode': 'repulse'
+                                        }
                                     }
                                 }
                             }
-                        }
-                    }}/>
-            </BackgroundContainer>
+                        }}/>
+                </BackgroundContainer>
+            </CenterContainer>
+            
+            
         </>
     );
 }
