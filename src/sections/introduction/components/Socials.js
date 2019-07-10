@@ -1,13 +1,23 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { Component } from 'react';
+import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
+import { connect } from 'react-redux';
+
+import { playNextAnimation } from '../../../actions/animationActions';
+
 // Elements
 const SocialContainer = styled.div`
+    opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    ${props => props.appeared && css`
+        opacity: 1;
+        animation: 0.5s fadeIn;
+    `}
 `;
 const IconContainer = styled.a`
     margin: 2rem 1.5rem;
@@ -19,21 +29,49 @@ const IconContainer = styled.a`
     &:hover {
         transform: scale(1.5);
     }
+
+    ${props => props.appeared && css`
+        animation: 0.5s fadeIn;
+    `}
 `;
 
-// Render
-const Socials = (props) => {
-    return (
-        <SocialContainer>
-            <IconContainer href="https://nl.linkedin.com/in/martijn-schouten-0665459a">
-                <FontAwesomeIcon icon={ faLinkedin } />
-            </IconContainer>
-            
-            <IconContainer href="http://github.com/memartijn">
-                <FontAwesomeIcon icon={ faGithub } />
-            </IconContainer>
-        </SocialContainer>
-    );
+class Socials extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            appeared: false,
+        }
+    }
+
+    render() {
+        if (this.props.animations.animationFlow[0] === this.constructor.name) {
+            setTimeout(() => {
+                this.setState({
+                    appeared: true
+                })
+
+                // Animations are finished, continue onwards
+                this.props.playNextAnimation();
+            }, 800)
+        }
+
+        return (
+            <SocialContainer appeared={ this.state.appeared }>
+                <IconContainer href="https://nl.linkedin.com/in/martijn-schouten-0665459a"  appeared={ this.state.appeared }>
+                    <FontAwesomeIcon icon={ faLinkedin } />
+                </IconContainer>
+                
+                <IconContainer href="http://github.com/memartijn"  appeared={ this.state.appeared }>
+                    <FontAwesomeIcon icon={ faGithub } />
+                </IconContainer>
+            </SocialContainer>
+        );
+    }
 }
 
-export default Socials;
+const mapStateToProps = state => ({
+    animations: state.animations
+})
+
+export default connect(mapStateToProps, { playNextAnimation })(Socials);
