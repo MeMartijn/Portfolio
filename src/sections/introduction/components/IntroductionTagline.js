@@ -24,6 +24,13 @@ const IntroductionHeader = styled.h1 `
             animation: flickering 1.1s linear 1s infinite;
         }
     `}
+
+    @media (max-width: 600px) {
+        font-size: 4em;
+    }
+    @media (max-width: 500px) {
+        font-size: 3em;
+    }
 `;
 
 class IntroductionTagline extends Typewriter {

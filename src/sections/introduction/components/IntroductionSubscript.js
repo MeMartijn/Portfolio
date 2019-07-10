@@ -29,6 +29,13 @@ const IntroductionSub = styled.div `
             animation: flickering 1.1s linear 1s infinite;
         }
     `}
+
+    @media (max-width: 600px) {
+        font-size: 2.5em;
+    }
+    @media (max-width: 500px) {
+        font-size: 1.5em;
+    }
 `;
 
 const Selection = styled.span `
