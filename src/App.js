@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Particles from 'react-particles-js';
 import Introduction from './sections/introduction/Introduction';
 
 import './styles/reset.css';

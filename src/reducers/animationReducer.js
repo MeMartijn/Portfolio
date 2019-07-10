@@ -1,7 +1,7 @@
 import { PLAY_NEXT_ANIMATION } from '../actions/types';
 
 const initialState = {
-    animationFlow: ['IntroductionTagline']
+    animationFlow: ['IntroductionTagline', 'IntroductionSubscript', 'Socials']
 }
 
 export default function(state = initialState, action) {

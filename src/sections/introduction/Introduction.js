@@ -1,8 +1,9 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Particles from 'react-particles-js';
 import IntroductionTagline from './components/IntroductionTagline';
+import IntroductionSubscript from './components/IntroductionSubscript';
 import Socials from './components/Socials';
 
 // Elements
@@ -18,43 +19,50 @@ const CenterContainer = styled.section`
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    text-align: center;
+`;
+const IntroductionContainer = styled.div`
+    z-index: 10;
 `;
 
 // Render
 const Introduction = (props) => {
     return (
         <>
-            <BackgroundContainer id="particles">
-                <Particles
-                    params = {{
-                        'particles': {
-                            'number': {
-                                'value': 30,
-                                'density': {
-                                    "enable": true
-                                }
-                            },
-                            'move': {
-                                'speed': 1,
-                            },
-                            'interactivity': {
-                                'events': {
-                                    'onhover': {
-                                    'enable': true,
-                                    'mode': 'repulse'
+            <CenterContainer>
+                <IntroductionContainer>
+                    <IntroductionTagline text="Hi, I'm Martijn." />
+                    <IntroductionSubscript text="I digitize businesses." />
+                    <Socials/>
+                </IntroductionContainer>
+
+                <BackgroundContainer id="particles">
+                    <Particles
+                        params = {{
+                            'particles': {
+                                'number': {
+                                    'value': 30,
+                                    'density': {
+                                        "enable": true
+                                    }
+                                },
+                                'move': {
+                                    'speed': 1,
+                                },
+                                'interactivity': {
+                                    'events': {
+                                        'onhover': {
+                                        'enable': true,
+                                        'mode': 'repulse'
+                                        }
                                     }
                                 }
                             }
-                        }
-                    }}/>
-            </BackgroundContainer>
-
-            <CenterContainer>
-                <div>
-                    <IntroductionTagline text="Hi, I'm Martijn." />
-                    <Socials/>
-                </div>
+                        }}/>
+                </BackgroundContainer>
             </CenterContainer>
+            
+            
         </>
     );
 }

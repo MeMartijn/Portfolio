@@ -1,14 +1,26 @@
 @keyframes flickering {
   0% {
-    background-color: white;
+    background-color: transparent;
   }
   49% {
-    background-color: white;
+    background-color: transparent;
   }
   50% {
-    background-color: transparent;
+    background-color: white;
   }
   100% {
-    background-color: transparent;
+    background-color: white;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
