@@ -34,6 +34,10 @@ const IntroductionHeader = styled.h1 `
 `;
 
 class IntroductionTagline extends Typewriter {
+    componentWillMount() {
+        this.setClassName('IntroductionTagline');
+    }
+
     onAnimationEnd() {
         setTimeout(() => {
             this.setState({
@@ -45,7 +49,7 @@ class IntroductionTagline extends Typewriter {
     }
 
     render() {
-        if (this.props.animations.animationFlow[0] === this.constructor.name) {
+        if (this.props.animations.animationFlow[0] === this.className) {
             if (!this.timeout) {
                 this.setState({
                     animated: true

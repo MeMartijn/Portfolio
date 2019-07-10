@@ -46,6 +46,10 @@ const Selection = styled.span `
 `;
 
 class IntroductionSubscript extends Typewriter {
+    componentWillMount() {
+        this.setClassName('IntroductionSubscript');
+    }
+
     onAnimationEnd() {
         // Disable flickering animation
         this.setState({
@@ -100,7 +104,7 @@ class IntroductionSubscript extends Typewriter {
     }
 
     render() {
-        if (this.props.animations.animationFlow[0] === this.constructor.name) {
+        if (this.props.animations.animationFlow[0] === this.className) {
             if (!this.timeout) {
                 this.setState({
                     animated: true,

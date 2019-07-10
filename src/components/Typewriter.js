@@ -58,6 +58,11 @@ class Typewriter extends Component {
         return null;
     }
 
+    // Hook to define the method name
+    setClassName(name) {
+        this.className = name
+    }
+
     // Render will be replaced by child components
     render() {
         return null;

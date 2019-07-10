@@ -42,10 +42,12 @@ class Socials extends Component {
         this.state = {
             appeared: false,
         }
+
+        this.className = 'Socials'
     }
 
     render() {
-        if (this.props.animations.animationFlow[0] === this.constructor.name) {
+        if (this.props.animations.animationFlow[0] === this.className) {
             setTimeout(() => {
                 this.setState({
                     appeared: true
