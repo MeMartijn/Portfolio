@@ -60,7 +60,7 @@ class Socials extends Component {
 
         return (
             <SocialContainer appeared={ this.state.appeared }>
-                <IconContainer href="https://nl.linkedin.com/in/martijn-schouten-0665459a"  appeared={ this.state.appeared }>
+                <IconContainer href="https://www.linkedin.com/in/martijn-schouten/"  appeared={ this.state.appeared }>
                     <FontAwesomeIcon icon={ faLinkedin } />
                 </IconContainer>
                 
