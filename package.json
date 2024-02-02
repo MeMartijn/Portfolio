@@ -1,39 +1,15 @@
-{
-  "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://martijn.me",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "cubic-bezier": "^0.1.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-particles-js": "^2.6.0",
-    "react-redux": "^7.1.0",
-    "react-scripts": "^3.0.1",
-    "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0",
-    "styled-components": "^4.3.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "redux-devtools-extension": "^2.13.8"
-  }
-}
+It seems like there is an issue with the code as it is not displaying the desired output. However, without seeing the code itself, it is difficult to provide specific improvements. 
+
+Here are some general suggestions to improve code quality:
+
+1. Ensure that all necessary libraries and modules are imported correctly and used appropriately in the code.
+2. Use meaningful variable and function names to make the code more readable.
+3. Add comments to explain the purpose and functionality of different parts of the code.
+4. Break down complex tasks into smaller functions or modules for better maintainability and reusability.
+5. Handle potential errors or exceptions that may occur during execution using try-catch blocks.
+6. Use consistent indentation and formatting.
+7. Remove any unnecessary code or redundant statements.
+8. Write unit tests to verify the correctness of the code.
+9. Consider using efficient algorithms or data structures to optimize execution time and memory usage.
+
+If you can provide the actual code, I can provide more specific recommendations.
